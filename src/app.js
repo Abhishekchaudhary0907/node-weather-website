@@ -5,6 +5,7 @@ const path = require('path');
 const hbs = require('hbs');
 
 const app = express();
+const port = process.env.PORT || 3000
 // const publicDirectoryPath = path.join(__dirname,'../public');
 // app.use(express.static(publicDirectoryPath));
 
@@ -92,6 +93,6 @@ app.get('/weather',(req,res) => {
       })
 })
 
-app.listen(3000,() => {
-    console.log("express server is running at port number 3000");
+app.listen(port,() => {
+    console.log("express server is running at port number "+port);
 })
