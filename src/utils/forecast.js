@@ -10,9 +10,9 @@ const forecast =(latitude,longitude,callback) => {
             callback('unable to fine location',undefined);
         }else{
             callback(undefined,
-                body.current.weather_descriptions[0]+" It is currentely "+" current temparature is "
-                +body.current.temperature + " feels like temparature is "+
-                body.current.feelslike
+                body.current.weather_descriptions[0]+" ."+" Current temparature is "
+                +body.current.temperature + " and Feels like temparature is "+
+                body.current.feelslike+". Humidity is "+body.current.humidity+"."
             )
         }
     })
